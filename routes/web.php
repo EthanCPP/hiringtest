@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('users', 'UserController@index');
+
+Route::get('comments/user/{id}', 'CommentsController@showUser');
+Route::get('comments/game/{id}', 'CommentsController@showGame');
+
+Route::get('games', 'GameController@index');
